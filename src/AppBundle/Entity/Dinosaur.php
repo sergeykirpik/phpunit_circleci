@@ -41,6 +41,16 @@ class Dinosaur
         $this->length = $length;
     }
 
+    public function getGenus(): string
+    {
+        return $this->genus;
+    }
+
+    public function isCarnivorous(): bool
+    {
+        return $this->isCarnivorous;
+    }
+
     public function getSpecification(): string
     {
         return sprintf(
