@@ -23,4 +23,9 @@ class DinosaurFactory
 
         return $dinosaur;
     }
+
+    public function growFromSpecification(string $specification): Dinosaur
+    {
+        return new Dinosaur();
+    }
 }
