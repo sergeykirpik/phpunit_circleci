@@ -10,7 +10,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Dinosaur
 {
-    const LARGE = 20;
+    const LARGE = 10;
+    const HUGE  = 30;
+    const MIN_LENGTH = 1;
+    const MAX_LENGTH = 100;
 
     /**
      * @ORM\Column(type="integer")
