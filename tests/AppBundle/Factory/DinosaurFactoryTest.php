@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Factory;
+namespace Tests\AppBundle\Factory;
 
 use AppBundle\Entity\Dinosaur;
 use AppBundle\Factory\DinosaurFactory;

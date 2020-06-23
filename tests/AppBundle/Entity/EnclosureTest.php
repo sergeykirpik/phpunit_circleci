@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Entity;
+namespace Tests\AppBundle\Entity;
 
 use AppBundle\Entity\Dinosaur;
 use PHPUnit\Framework\TestCase;
@@ -36,11 +36,13 @@ class EnclosureTest extends TestCase
         $enclosure->addDinosaur(new Dinosaur('Velociraptor', true));
     }
 
-    /**
-     * @expectedException AppBundle\Exception\NotABuffetException
-     */
+    // /**
+    //  * @expectedException AppBundle\Exception\NotABuffetException
+    //  */
     public function testItDoesNotAllowToAddNonCarnivorousDinosaursToCarnivorousEnclosure()
     {
+        $this->expectException(NotABuffetException::class);
+
         $enclosure = new Enclosure(true);
         $enclosure->addDinosaur(new Dinosaur('Velociraptor', true));
         $enclosure->addDinosaur(new Dinosaur());
