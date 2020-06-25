@@ -33,6 +33,6 @@ class EnclosureBuilderServiceTest extends TestCase
         $this->assertCount(1, $enclosure->getSecurities());
         $this->assertCount(2, $enclosure->getDinosaurs());
 
-        dump($enclosure->getDinosaurs()->toArray());
+        //dump($enclosure->getDinosaurs()->toArray());
     }
 }
