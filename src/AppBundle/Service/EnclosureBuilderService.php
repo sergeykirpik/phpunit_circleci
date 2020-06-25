@@ -39,6 +39,9 @@ class EnclosureBuilderService
 
         $this->addDinosaurs($numberOfDinosaurs, $enclosure);
 
+        $this->entityManager->persist($enclosure);
+        $this->entityManager->flush();
+
         return $enclosure;
     }
 
