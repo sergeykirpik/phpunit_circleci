@@ -16,6 +16,13 @@ class Dinosaur
     const MAX_LENGTH = 100;
 
     /**
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
      * @ORM\Column(type="integer")
      */
     private $length = 0;
