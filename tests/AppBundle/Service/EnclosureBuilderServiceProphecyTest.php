@@ -9,9 +9,12 @@ use AppBundle\Service\EnclosureBuilderService;
 use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
+use Prophecy\PhpUnit\ProphecyTrait;
 
 class EnclosureBuilderServiceProphecyTest extends TestCase
 {
+    use ProphecyTrait;
+
     public function testItBuildsAndPersistsEnclosure()
     {
         $em = $this->prophesize(EntityManagerInterface::class);
