@@ -34,6 +34,7 @@
     },
     "require-dev": {
         "doctrine/data-fixtures": "^1.4",
+        "liip/functional-test-bundle": "^4.2",
         "phpspec/prophecy": "^1.10",
         "phpspec/prophecy-phpunit": "^2.0",
         "phpunit/phpunit": "^9.2",
