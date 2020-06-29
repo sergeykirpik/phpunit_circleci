@@ -26,3 +26,7 @@ doctrine:
         url: 'sqlite:///%kernel.project_dir%/var/data/test.sqlite'
 
 liip_functional_test: ~
+
+liip_test_fixtures:
+    cache_db:
+        sqlite: liip_test_fixtures.services_database_backup.sqlite
