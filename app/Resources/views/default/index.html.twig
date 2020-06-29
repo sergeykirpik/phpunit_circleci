@@ -11,6 +11,13 @@
                     <td>
                         Contains <strong>{{ enclosure.dinosaurCount }} dinosaurs</strong>
                     </td>
+                    <td>
+                        {% if enclosure.isSecurityActive %}
+                            🔒 Security active!
+                        {% else %}
+                            <button class="button button-alarm">Sound alarm!!!</button>
+                        {% endif %}
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
