@@ -1,6 +1,5 @@
 <?php
 
-use Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
@@ -23,7 +22,7 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new DoctrineFixturesBundle();
+            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
 
             if ('dev' === $this->getEnvironment()) {
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
@@ -32,6 +31,7 @@ class AppKernel extends Kernel
 
             if ('test' === $this->getEnvironment()) {
                 $bundles[] = new Liip\FunctionalTestBundle\LiipFunctionalTestBundle();
+                $bundles[] = new Liip\TestFixturesBundle\LiipTestFixturesBundle();
             }
         }
 
